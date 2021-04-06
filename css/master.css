@@ -530,5 +530,9 @@ h6 {
     and (device-height: 812px)
     and (-webkit-device-pixel-ratio: 3) {
 
+.t3{
+  font-size: 5vh;
+
+}
 
     }
