@@ -55,7 +55,7 @@ h2{
   text-align: center;
   font-family: Helvetica;
   font-weight: 400;
-  font-size: 72px;
+  font-size: 12vh;
   margin: 40vh;
 }
 
@@ -86,7 +86,7 @@ h6 {
 
 .t3 {
   margin-top: 0;
-  font-size: 60px;
+  font-size: 7vh;
   font-family: Helvetica;
   font-weight: normal;
   letter-spacing: 1px;
@@ -524,3 +524,11 @@ h6 {
   opacity: 1;
    }
   }
+
+  @media only screen
+    and (device-width: 375px)
+    and (device-height: 812px)
+    and (-webkit-device-pixel-ratio: 3) {
+
+
+    }
