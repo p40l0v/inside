@@ -1,11 +1,3 @@
-/* ------------ Main -------------- */
-/* To do:
-    cleanup html
-    make everything in responsive units
-    migrate to locomotive
- */
-
-
 * {
   box-sizing: border-box;
 }
@@ -18,43 +10,45 @@ html {
 body {
   margin: 0;
   padding: 0;
-  width: 100vw;
+  width: 100VW;
   height: 100%;
   min-height: 300vh;
-  font-family: sans-serif;
+  background-color: black;
+
+
 }
 
 .main-content {
   width: 100vw;
   height: auto;
-  background-color: white;
-}
-
-a {
-  text-decoration: none; /* no underline */
-  color: inherit;
+  background-color: black;
+  color: white;!important
 }
 
 /* Header */
 header {
   max-width: 100vw;
-  height: 4.5vh;
+  height: 40px;
   position: sticky;
   top: 0;
-  margin-top: 20vh;
+  margin-top: 100px;
   padding: 0 0 0 1vw;
   width: 100vw;
-  z-index: 100000000000000;
+  z-index: 1000;
   border-bottom: 2px solid;
-  background-color: white;
+  background-color: black;
+  color: white;
   padding-left: 0;
 }
 
 #title{
   padding-left: 2vw;
-  font-size: 2.5em;
-  font-family: Helvetica;
-  font-weight: 400;
+
+}
+
+.studio{
+  position: relative;
+  margin-bottom: -30vh;
 }
 
 /* Typography */
@@ -67,109 +61,116 @@ h1 {
 }
 
 h2{
-  z-index: 1;
-  text-align: center;
+  font-weight: 400;
+  font-size: 4em;
+}
+
+h3, h5{
+  font-weight: 400;
+  font-size: 2em;
+  margin:3vh;
+}
+
+h3{
+  text-decoration: underline;
+}
+
+h5{
+  font-size: 1em;
+
+}
+
+h6 {
+  margin-top: 0;
+  font-size: 36px;
   font-family: Helvetica;
   font-weight: 400;
-  font-size: 8em;
-  position: sticky;
-  position: -webkit-sticky; /* Safari */
-  top:40vh;
-  margin-top: 50vh;
-  margin-bottom: 80vh;
 }
 
-h4 {
+.t2 {
   margin-top: 0;
-  font-size: 5vh;
-  font-family: Helvetica;
-  font-weight: normal;
-  letter-spacing: 1px;
-  word-spacing: -0.1em;
-}
-
-p {
-  margin-top: 0;
-  font-size: 30px;
+  font-size: 1.5em;
   font-family: Helvetica;
   font-weight: normal;
   word-spacing: -3px;
   line-height: 1.3;
 }
 
+.t3 {
+  margin-top: 0;
+  font-size: 7vh;
+  font-family: Helvetica;
+  font-weight: normal;
+  letter-spacing: 1px;
+  word-spacing: -0.1em;
+}
+
+.year {
+  font-size: 5em;
+  letter-spacing: 0.1em;
+  color: blue;
+  font-family: 'Teko';
+}
+
+.subtitle {
+  font-size: 3em;
+  font-family: Helvetica;
+  padding: -1em 0;
+}
+
+.p1{
+  position: sticky;
+  position: -webkit-sticky; /* Safari */
+  top:40vh;
+  margin-top: 50vh;
+  text-align: center;
+  font-family: Helvetica;
+  font-weight: 400;
+  color: white;
+
+}
+
+
+
 /* Containers */
+.sct {
+  padding-top: 80vh;
 
-.section1{
-  margin-top: 10vh;
 }
 
-.left{
-  width: 75%;
-  z-index: 10000;
-  position: relative;
-}
-
-
-/* Introduction */
-.block-1 {
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  -webkit-background-size: cover;
-  background-image: url('../img/12.jpg');
-  box-sizing: border-box;
-  background-position: center;
-  position: fixed;
-  z-index: 1000000000;
-  top: 0;
+.sctl {
+  height: 140vh;
 }
 
 .opening {
   height: 100vh;
 }
 
-.collapsible {
-  background-color: white;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: center;
-  outline: none;
-  font-size: 15px;
+.video{
+  height: 400vh;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.collapsible:active, .collapsible:hover {
-  background-color: #ccc;
+#choice {
+  height: 100vh;
 }
 
-/* Style the collapsible content. Note: hidden by default */
-.content {
-  display: none;
-  overflow: hidden;
+#link {
+  height: 20vh;
 }
 
 .maintext {
   max-width: 80vw;
   height: auto;
-  margin: 0 auto;
+  margin: 100px auto;
   padding-left: 8vw;
-  background-color: white;
+  background-color: black;
+  z-index: 1000;
+  position: relative;
 
 }
 
-.archive{
-  position: sticky;
-  position: -webkit-sticky; /* Safari */
-  top:40px;
-}
-
-
-/* ------------ Images -------------- */
 .full {
-  max-width: 90%;
+  max-width: 80%;
   height: auto;
 }
 
@@ -183,14 +184,113 @@ p {
   height: auto;
 }
 
+.image-tl-full {
+  max-width: 80%;
+  margin: 2vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-tl-half {
+  max-width: 40%;
+  margin: 1vh;
+  margin-left: 5vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-tl-third {
+  width: 25%;
+  height: auto;
+  margin: 0;
+  z-index: 1;
+  display: inline-block;
+  position: relative;
+}
+
+.imgstack {
+  margin-top: 100px;
+}
+
+.timeline {
+  width: 100vw;
+  height: 90vh;
+  margin-top: 00px;
+  margin-bottom: 5vh;
+  position: relative;
+}
+
+.end {
+  align-self: flex-end;
+}
+
+.quote {
+  margin: 10vh 0;
+  width: 100vw;
+  text-align: center;
+  height: 110vh;
+}
+
+.quote img {
+  position: relative;
+  margin: 0 auto;
+}
+
 .image-stack {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   position: relative;
-  z-index: 1000;
-
 }
 
+.sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 150px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.stucky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 50px;
+  overflow: hidden;
+  text-align: left;
+}
+
+/* Introduction */
+.block-1, .block-3 {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-image: url('../img/3.jpg');
+  box-sizing: border-box;
+  background-position: center;
+  position: fixed;
+  z-index: 1000000000;
+  top: 0;
+}
+
+.block-2 {
+  height: 1vh;
+  background: url('../img/11.jpg') no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  top: ;
+  z-index: -1;
+}
+
+.block-3 {
+  height: 1vh;
+  background-image: url('../img/11.jpg');
+}
+
+
+
+/* Content */
 .image-stack__item--top {
   grid-column: 2 / span 8;
   grid-row: 1; // must be on the same row as the other image
@@ -224,11 +324,11 @@ p {
 }
 
 .image-stack__item--5 {
-  grid-column: 12 / 7;
+  grid-column: 5 / -3;
   grid-row: 3; // make this image be on the same row
   z-index: 100;
   padding-left: 100px;
-  margin-top: -100px;
+  margin-top: -300px;
 }
 
 .image-stack__item--6 {
@@ -267,8 +367,39 @@ p {
 }
 
 
-/* ------------ Navigation -------------- */
+.comparison {
+  text-align: center;
+  height: auto;
+  margin: 0 auto;
+  max-width: 80vw;
+}
 
+.cmp {
+  width: 60vw;
+  margin: 0 10vw 5vh 10vh;
+}
+
+.cmp-top {}
+
+#v0 {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      z-index: -1;
+  }
+
+  #set-height {
+      display: block;
+  }
+
+  /* .wrapper {
+    min-height: 100vh;
+    font-family: "Roboto Slab", serif;
+    font-weight: 300;
+    position: relative;
+  } */
 
   .nav__wrapper {
     position: fixed;
@@ -310,6 +441,7 @@ p {
     position: relative;
     transition: all 0.3s ease-out;
     margin-bottom: 1em;
+    color: white;
   }
   .nav li:after {
     content: "";
@@ -327,6 +459,8 @@ p {
     padding: 0;
     color: black;
     transition: all 0.15s ease-out;
+    color: white;
+
   }
   .nav li a:hover {
     background-color: transparent;
@@ -358,11 +492,6 @@ p {
     overflow: visible;
   }
 
-
-
-  /* ------------ Animations -------------- */
-
-
   .moved {
     transform: perspective(500px) translate3d(0, 0, 0);
     animation-duration: 3s;
@@ -372,6 +501,7 @@ p {
     animation-iteration-count: 1;
     animation-fill-mode: both;
     overflow: visible;
+
   }
 
   .moved2 {
@@ -415,16 +545,26 @@ p {
    }
   }
 
-
-
-
-
-  /* ------------ Media Queries -------------- */
-
   @media only screen
     and (device-width: 375px)
     and (device-height: 812px)
     and (-webkit-device-pixel-ratio: 3) {
+
+      .t2 {
+        margin-top: 0;
+        font-size: 3vh;
+        font-family: Helvetica;
+        font-weight: normal;
+        line-height: 1.3;
+      }
+
+      .t3 {
+        margin-top: 0;
+        font-size: 6vh;
+        font-family: Helvetica;
+        font-weight: normal;
+        letter-spacing: -1px;
+      }
 
       .nav__wrapper {
         visibility:hidden;
@@ -438,144 +578,3 @@ p {
         z-index: 1000000;
       }
     }
-
-
-    * {
-  box-sizing: border-box;
-}
-
-
-
-
-
-
-/* ------------ Archive Stuff -------------- */
-
-/* ---- button ---- */
-
-.button {
-  display: inline-block;
-  padding: 0.5em 1em;
-  background: #eee;
-  border: none;
-  border-radius: 7px;
-  background-image: linear-gradient(
-    to bottom,
-    hsla(0, 0%, 0%, 0),
-    hsla(0, 0%, 0%, 0.2)
-  );
-  color: #222;
-  font-family: sans-serif;
-  font-size: 16px;
-  text-shadow: 0 1px white;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #8cf;
-  text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
-  color: #222;
-}
-
-.button:active,
-.button.is-checked {
-  background-color: #28f;
-}
-
-.button.is-checked {
-  color: white;
-  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
-}
-
-.button:active {
-  box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
-}
-
-/* ---- button-group ---- */
-
-.button-group:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-.button-group .button {
-  float: left;
-  border-radius: 0;
-  margin-left: 0;
-  margin-right: 1px;
-}
-
-.button-group .button:first-child {
-  border-radius: 0.5em 0 0 0.5em;
-}
-.button-group .button:last-child {
-  border-radius: 0 0.5em 0.5em 0;
-}
-
-/* ---- isotope ---- */
-
-.grid {
-  background: #eee;
-  max-width: 1200px;
-}
-
-/* clear fix */
-.grid:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-/* ui group */
-
-.ui-group {
-  display: inline-block;
-}
-
-.ui-group h3 {
-  display: inline-block;
-  margin-right: 0.2em;
-  font-size: 16px;
-}
-
-.ui-group .button-group {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-/* color-shape */
-
-.color-shape {
-  width: 70px;
-  height: 70px;
-  margin: 5px;
-  float: left;
-}
-
-.color-shape.round {
-  border-radius: 35px;
-}
-
-.color-shape.big.round {
-  border-radius: 75px;
-}
-
-.color-shape.red {
-  background: red;
-}
-.color-shape.blue {
-  background: blue;
-}
-.color-shape.yellow {
-  background: yellow;
-}
-
-.color-shape.wide,
-.color-shape.big {
-  width: 150px;
-}
-.color-shape.tall,
-.color-shape.big {
-  height: 150px;
-}
